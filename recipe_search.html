@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Recipe Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ff7043;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        #result {
+            margin-top: 30px;
+            text-align: left;
+            display: inline-block;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🍽 Recipe Finder</h1>
+
+    <input type="text" id="recipeInput" placeholder="Enter recipe name">
+    <button onclick="findRecipe()">Search</button>
+
+    <div id="result"></div>
+
+    <script>
+        <script>
+    function findRecipe() {
+        var recipe = document.getElementById("recipeInput").value.toLowerCase();
+        var resultDiv = document.getElementById("result");
+
+        if (recipe === "cake") {
+            resultDiv.innerHTML = `
+                <h2>Chocolate Cake</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Flour</li>
+                    <li>Sugar</li>
+                    <li>Cocoa Powder</li>
+                    <li>Eggs</li>
+                    <li>Milk</li>
+                </ul>
+                <h3>Preparation:</h3>
+                <ol>
+                    <li>Mix dry ingredients.</li>
+                    <li>Add eggs and milk.</li>
+                    <li>Pour into pan.</li>
+                    <li>Bake for 30 minutes.</li>
+                </ol>
+            `;
+        } 
+        else if (recipe === "pasta") {
+            resultDiv.innerHTML = `
+                <h2>Pasta</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Pasta</li>
+                    <li>Tomato Sauce</li>
+                    <li>Garlic</li>
+                    <li>Olive Oil</li>
+                </ul>
+                <h3>Preparation:</h3>
+                <ol>
+                    <li>Boil pasta.</li>
+                    <li>Prepare sauce.</li>
+                    <li>Mix together.</li>
+                    <li>Serve hot.</li>
+                </ol>
+            `;
+        } 
+        else if (recipe === "biryani") {
+            resultDiv.innerHTML = `
+                <h2>Biryani</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Rice</li>
+                    <li>Chicken</li>
+                    <li>Spices</li>
+                    <li>Onions</li>
+                    <li>Yogurt</li>
+                </ul>
+                <h3>Preparation:</h3>
+                <ol>
+                    <li>Cook rice separately.</li>
+                    <li>Cook chicken with spices.</li>
+                    <li>Layer rice and chicken.</li>
+                    <li>Cook on low flame for 15 minutes.</li>
+                </ol>
+            `;
+        } 
+        else if (recipe === "dosa") {
+            resultDiv.innerHTML = `
+                <h2>Dosa</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Rice Batter</li>
+                    <li>Oil</li>
+                    <li>Salt</li>
+                </ul>
+                <h3>Preparation:</h3>
+                <ol>
+                    <li>Heat pan.</li>
+                    <li>Spread batter in circular shape.</li>
+                    <li>Add oil around edges.</li>
+                    <li>Cook until crispy.</li>
+                </ol>
+            `;
+        } 
+        else if (recipe === "sandwich") {
+            resultDiv.innerHTML = `
+                <h2>Sandwich</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Bread</li>
+                    <li>Butter</li>
+                    <li>Vegetables</li>
+                    <li>Cheese</li>
+                </ul>
+                <h3>Preparation:</h3>
+                <ol>
+                    <li>Spread butter on bread.</li>
+                    <li>Add vegetables and cheese.</li>
+                    <li>Cover with another slice.</li>
+                    <li>Cut and serve.</li>
+                </ol>
+            `;
+        } 
+        else {
+            resultDiv.innerHTML = "<h3>Recipe not found 😔</h3>";
+        }
+    }
+</script>
+</html>
